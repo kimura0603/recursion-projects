@@ -1,5 +1,6 @@
 file = open('test.txt')
 contents = file.read()
+print(contents)
 file.close()
 
 file = open('test.txt', 'w')
