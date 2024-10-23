@@ -1,3 +1,4 @@
+# 前提:mkdir -p data/tempフォルダを作成
 import os
 # jsonはJSONファイルの解析と生成に使用します。
 import json
