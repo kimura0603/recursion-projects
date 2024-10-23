@@ -1,3 +1,7 @@
 file = open('test.txt')
-print(file.read())
+contents = file.read()
+file.close()
+
+file = open('test.txt', 'w')
+file.write(contents + "\nAppending more text to this file!")
 file.close()
