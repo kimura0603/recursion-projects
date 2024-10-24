@@ -5,7 +5,7 @@ sock = socket.socket(socket.AF_UNIX, socket.SOCK_DGRAM)
 
 # サーバのアドレスを定義します。
 # サーバはこのアドレスでメッセージを待ち受けます
-server_address = '/udp_socket_file'
+server_address = '/tmp/udp_socket_file'
 
 # このクライアントのアドレスを定義します。
 # サーバはこのアドレスにメッセージを返します
