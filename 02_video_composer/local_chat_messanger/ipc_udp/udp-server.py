@@ -6,7 +6,8 @@ import os
 sock = socket.socket(socket.AF_UNIX, socket.SOCK_DGRAM)
 
 # サーバが接続を待ち受けるUNIXドメインソケットのパスを指定します。
-server_address = '/tmp/udp_socket_file'
+# テキストの記載のままだと、perrmission errorが出るのでソケットファイル作成権限のあるパスに変更
+server_address = 'udp_socket_file'
 
 try:
     # もし前回の実行でソケットファイルが残っていた場合、そのファイルを削除します。
@@ -32,6 +33,7 @@ while True:
     # 受信したデータのバイト数と送信元のアドレスを表示します。
     print('received {} bytes from {}'.format(len(data), address))
     print(data)
+    print(address)
 
     # 受信したデータをそのまま送信元に送り返します。
     if data:

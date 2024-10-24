@@ -5,11 +5,12 @@ sock = socket.socket(socket.AF_UNIX, socket.SOCK_DGRAM)
 
 # サーバのアドレスを定義します。
 # サーバはこのアドレスでメッセージを待ち受けます
-server_address = '/tmp/udp_socket_file'
+server_address = 'udp_socket_file'
 
 # このクライアントのアドレスを定義します。
 # サーバはこのアドレスにメッセージを返します
-address = '/udp_client_socket_file'
+# テキストの記載のままだと、perrmission errorが出るのでソケットファイル作成権限のあるパスに変更
+address = 'udp_client_socket_file'
 
 # サーバに送信するメッセージを定義します
 message = b'Message to send to the client.'
